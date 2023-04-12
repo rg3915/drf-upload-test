@@ -35,7 +35,7 @@ python manage.py createsuperuser --username="admin" --email=""
 Upload
 
 ```
-curl -X POST -H 'Authorization: Token <YOUR_TOKEN>' -F '<FIELD_NAME>=@<FILE.zip>' http://localhost:8000/api/v1/documentos/
+curl -X POST -H 'Authorization: Token <YOUR_TOKEN>' -F '<FIELD_NAME>=@<PATH/FILE.zip>' http://localhost:8000/api/v1/documentos/
 
 curl -X POST -H 'Authorization: Token ac8542e61e6b48098ba9af900dad6d90caf2bde5' -F 'document=@doc01.pdf' http://localhost:8000/api/v1/documentos/
 ```
