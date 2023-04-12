@@ -10,5 +10,5 @@ router = routers.DefaultRouter()
 router.register(r'documentos', DocumentViewSet)
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path('', include(router.urls)),
 ]

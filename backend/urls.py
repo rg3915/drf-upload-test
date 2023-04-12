@@ -21,8 +21,14 @@ schema_view = get_schema_view(
 
 
 urlpatterns = [
-    path('', include('backend.core.urls', namespace='core')),  # noqa E501
+    path('api/v1/', include('backend.core.urls', namespace='core')),  # noqa E501
     path('admin/', admin.site.urls),
+]
+
+# djoser
+urlpatterns += [
+    path('api/v1/', include('djoser.urls')),
+    path('api/v1/auth/', include('djoser.urls.authtoken')),
 ]
 
 # swagger
